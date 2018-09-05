@@ -1,0 +1,16 @@
+
+# make sure the USB microphone is picked up 
+
+ pcm.!default { 
+          type asym 
+          playback.pcm { 
+                  type plug 
+                  slave.pcm "hw:1,0" 
+          } 
+          capture.pcm { 
+                  type plug 
+                  slave.pcm "hw:1,0" 
+          }  
+ } 
+  
+ 
